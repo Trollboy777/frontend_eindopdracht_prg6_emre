@@ -6,7 +6,7 @@ function Layout() {
             <header>
                 <nav>
                     <Link to={`/`}>Home</Link>
-                    <Link to={`/create`}>Create New Product</Link>
+                    <Link to={`/create`}>Create New Pokemon</Link>
 
                 </nav>
             </header>
