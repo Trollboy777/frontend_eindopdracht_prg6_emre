@@ -11,6 +11,7 @@ function PokeDeleteButton({ id, onDelete }) {
                     headers: {
                         'Accept': 'application/json',
                     },
+
                 });
                 if (!response.ok) {
                     throw new Error('Fout bij het verwijderen van het item');
