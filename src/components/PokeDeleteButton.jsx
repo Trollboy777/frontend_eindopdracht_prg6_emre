@@ -25,7 +25,7 @@ function PokeDeleteButton({ id, onDelete }) {
     };
 
     return (
-        <button onClick={handleDelete} className="bg-red-500 text-white px-3 py-1 rounded">
+        <button onClick={handleDelete} className="px-4 py-2 rounded-full bg-red-500 text-white font-bold transition duration-300 hover:bg-red-600 hover:text-[#747BFF] border-transparent">
             Verwijder
         </button>
     );

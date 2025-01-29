@@ -1,5 +1,5 @@
 import PokeCard from "./PokeCard.jsx";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 function PokeCardList() {
     const [products, setProducts] = useState([]);
@@ -23,15 +23,17 @@ function PokeCardList() {
 
         fetchProducts();
     }, []);
+
     const handleDelete = (id) => {
         setProducts((prevProducts) => prevProducts.filter((product) => product.id !== id));
     };
 
     return (
-        <ul>
-            {products.map((product) => (
-                <li key={product.id}>
+        <div className="flex justify-center">
+            <ul className="flex flex-wrap justify-center items-center gap-6 p-4">
+                {products.map((product) => (
                     <PokeCard
+                        key={product.id}
                         pokemon={{
                             imageUrl: product.imageUrl,
                             name: product.name,
@@ -41,10 +43,10 @@ function PokeCardList() {
                         }}
                         onDelete={handleDelete}
                     />
-
-                </li>
-            ))}
-        </ul>
+                ))}
+            </ul>
+        </div>
     );
 }
+
 export default PokeCardList;
